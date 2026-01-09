@@ -15,7 +15,7 @@ id,name,collection,team,country,role,aim,HS,movement,aggression,ACS,gamesense,pu
 14,neT,Base Card,no_team,us,sentinel,83.12,79.04,77.90,61.30,66.90,70.00,true
 15,OXY,Base Card,cloud9,us,duelist,87.86,69.42,71.25,87.60,86.33,59.70,true
 16,Ethan,Base Card,nrg,us,flex,78.28,58.76,72.85,64.70,67.47,82.50,true
-17,s0m,Base Card,no_team,us,sentinel,80.74,65.78,78.85,59.40,73.07,74.40,true
+17,s0m,Eternal Heroes,nrg,us,sentinel,100.74,95.78,98.85,99.40,97.07,98.40,true
 18,brawk,Base Card,nrg,us,initiator,75.16,57.72,73.60,69.90,69.97,70.60,true
 19,mada,Base Card,nrg,ca,duelist,77.08,63.96,75.05,75.60,79.20,69.90,true
 20,skuba,Base Card,nrg,us,controller,79.02,72.54,76.65,64.10,70.30,69.80,true
@@ -79,9 +79,9 @@ id,name,collection,team,country,role,aim,HS,movement,aggression,ACS,gamesense,pu
 78,Jamppi,Base Card,vitality,fi,initiator,75.72,66.04,77.90,61.50,70.10,69.30,true
 79,sociablEE,Base Card,navi,tr,flex,77.72,60.84,76.00,77.70,85.40,70.50,true
 80,PROFEK,Base Card,vitality,pl,controller,70.16,70.72,70.75,53.40,72.13,72.20,true
-81,LewN,Base Card,no_team,tr,duelist,78.20,80.60,72.20,81.30,77.60,58.80,true
+81,LewN,Base Card,kc,tr,duelist,78.20,80.60,72.20,81.30,77.60,58.80,true
 82,MAGNUM,Base Card,no_team,cz,sentinel,74.38,65.26,76.95,64.90,71.00,70.50,true
-83,ANGE1,Base Card,navi,ua,flex,70.82,80.34,63.15,64.90,61.43,80.20,true
+83,Hermes,Base Card,drx,kr,flex,70.12,60.84,76.95,57.00,67.03,79.20,true
 84,Shao,Base Card,navi,united_nations,initiator,73.60,78.00,74.55,63.20,69.00,72.50,true
 85,Ruxic,Base Card,navi,tr,controller,80.80,72.80,80.75,69.80,72.50,70.30,true
 86,hiro,Base Card,navi,tr,sentinel,81.88,74.36,77.90,68.80,71.60,71.70,true
@@ -141,7 +141,7 @@ id,name,collection,team,country,role,aim,HS,movement,aggression,ACS,gamesense,pu
 140,Midi,Base Card,no_team,cn,flex,70.76,88.92,63.65,66.40,44.00,64.50,true
 141,Rarga,Base Card,xlg,ru,duelist,81.14,81.38,78.20,82.60,77.93,54.60,true
 142,happywei,Base Card,xlg,tw,sentinel,79.12,84.24,75.05,69.10,73.83,68.50,true
-143,coconut,Base Card,xlg,hk,controller,76.06,79.82,77.90,53.10,72.03,67.50,true
+143,coconut,Base Card,jdg,hk,controller,76.06,79.82,77.90,53.10,72.03,67.50,true
 144,MarT1n,Base Card,trace,cn,sentinel,71.86,61.62,77.90,75.90,68.63,53.10,true
 145,Nicc,Base Card,drg,tw,initiator,72.24,64.48,76.95,61.70,65.43,78.80,true
 146,Flex1n,Base Card,drg,cn,controller,73.90,66.30,78.85,68.00,66.53,74.50,true
@@ -223,13 +223,13 @@ id,name,collection,team,country,role,aim,HS,movement,aggression,ACS,gamesense,pu
 222,Akame,Base Card,dfm,kr,initiator,74.76,62.92,76.00,59.40,74.20,73.80,true
 223,gyen,Base Card,dfm,jp,controller,73.88,84.76,75.05,62.90,59.40,72.60,true
 224,SSeS,Base Card,dfm,jp,controller,60.70,81.90,60.75,56.00,55.97,75.90,true
-225,dos9,Base Card,no_team,kz,controller,69.56,68.12,70.75,57.30,75.60,78.00,true
+225,dos9,Base Card,kc,kz,controller,69.56,68.12,70.75,57.30,75.60,78.00,true
 226,Famouz,Base Card,no_team,id,duelist,76.66,46.02,76.00,74.10,84.80,61.10,true
 227,Shiro,Base Card,boom,id,initiator,64.84,67.08,60.75,65.30,68.20,81.20,true
 228,NcSlasher,Base Card,boom,id,flex,69.40,59.80,77.90,68.00,66.40,74.30,true
 229,BerserX,Base Card,boom,id,sentinel,73.04,59.28,79.80,69.00,75.90,64.50,true
 230,KovaQ,Base Card,no_team,ch,flex,67.38,78.26,65.05,63.90,78.47,78.10,true
-231,UNFAKE,Base Card,no_team,pl,initiator,64.94,78.78,68.85,62.80,72.67,68.90,true
+231,UNFAKE,Base Card,vitality,pl,initiator,64.94,78.78,68.85,62.80,72.67,68.90,true
 232,RgLMeister,Base Card,no_team,br,controller,60.66,61.62,61.70,56.00,54.50,52.20,true
 233,maestr0,Base Card,no_team,br,duelist,66.26,66.82,63.15,62.50,51.03,51.70,true
 234,prozin,Base Card,no_team,br,flex,60.12,60.84,56.00,54.00,48.93,59.50,true
@@ -594,3 +594,6 @@ id,name,collection,team,country,role,aim,HS,movement,aggression,ACS,gamesense,pu
 593,Zyppan,Valorant Masters Copenhagen 2022,fpx,tr,flex,94.80,92.90,90.75,98.80,95.50,91.30,true
 594,SUYGETSU,Valorant Masters Copenhagen 2022,fpx,tr,sentinel,98.88,96.36,96.90,94.80,95.60,94.70,true
 595,ardiis,Valorant Masters Copenhagen 2022,fpx,lv,duelist,94.28,92.56,92.90,95.40,93.47,91.80,true
+596,ZynX,Base Card,geng,kr,flex,69.66,85.02,66.00,70.10,71.10,61.50,true
+597,sheydos,Basem Card,kc,ru,initiator,71.72,71.24,73.60,61.30,74.83,72.00,true
+598,Flashback,Eternal Heroes,drx,kr,flex,99.52,96.84,95.80,97.80,98.43,95.40,true
