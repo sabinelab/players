@@ -6,10 +6,10 @@ export type Player = {
   country: string
   role: string
   aim: number
-  HS: number
+  hs: number
   movement: number
   aggression: number
-  ACS: number
+  acs: number
   gamesense: number
   purchasable: boolean
   ovr: number
