@@ -11,7 +11,6 @@ export type Player = {
   aggression: number
   acs: number
   gamesense: number
-  purchasable: boolean
   ovr: number
   price: number
 }
