@@ -5,42 +5,66 @@ import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+export type Player = {
+  id: number
+  name: string
+  collection: string
+  team: string
+  country: string
+  role: string
+  aim: number
+  hs: number
+  movement: number
+  aggression: number
+  acs: number
+  gamesense: number
+  ovr: number
+  price: number
+}
+
 export const getPlayers = () => {
-  const lines = fs.readFileSync(path.join(__dirname, 'players.csv')).toString().split('\n')
-  const headers = lines.shift().split(',').map(h => h.trim())
-  const data = []
+  const lines = fs.readFileSync(path.join(__dirname, '../assets/players.csv')).toString().split('\n')
+  const headers = lines
+    .shift()
+    ?.split(',')
+    .map(h => h.trim())
+  const data: Player[] = []
+
+  console.log(lines)
+
+  if (!headers) return []
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]?.trim()
     if (!line) continue
 
-    const obj = {}
+    const attr = {} as Player
     const values = lines[i].split(',')
 
     for (let i = 0; i < values.length; i++) {
-      let value = values[i]
+      let value: string | number = values[i]
 
       if (!Number.isNaN(Number(value))) {
         value = Number(values[i])
       }
 
-      obj[headers[i]] = value
+      attr[headers[i] as keyof Player] = value as never
     }
 
-    obj.ovr = calcPlayerOvr(obj)
-    obj.price = calcPlayerPrice(obj)
+    attr.ovr = calcPlayerOvr(attr)
+    attr.price = calcPlayerPrice(attr)
 
-    data.push(obj)
+    data.push(attr)
   }
 
   return data
 }
 
-export const getPlayer = id => {
+export const getPlayer = (id: string | number) => {
   return getPlayers().find(player => player.id === Number(id))
 }
 
-export const calcPlayerPrice = (player, devalue) => {
+export const calcPlayerPrice = (player: Player, devalue?: boolean) => {
   const overall = calcPlayerOvr(player)
 
   let price = Math.pow(1.06, overall) * 10000
@@ -50,8 +74,18 @@ export const calcPlayerPrice = (player, devalue) => {
   return Math.floor(price)
 }
 
-export const calcPlayerOvr = player => {
-  const weights = {
+export const calcPlayerOvr = (player: Player) => {
+  const weights: Record<
+    string,
+    {
+      aim: number
+      hs: number
+      movement: number
+      aggression: number
+      acs: number
+      gamesense: number
+    }
+  > = {
     duelist: {
       aim: 0.25,
       hs: 0.2,
@@ -94,7 +128,7 @@ export const calcPlayerOvr = player => {
     }
   }
 
-  const roleWeights = weights[player.role] ?? {
+  const roleWeights: Record<string, number> = weights[player.role] ?? {
     aim: 1 / 6,
     HS: 1 / 6,
     movement: 1 / 6,
@@ -103,7 +137,7 @@ export const calcPlayerOvr = player => {
     gamesense: 1 / 6
   }
 
-  const stats = {
+  const stats: Record<string, number> = {
     aim: player.aim || 0,
     hs: player.hs || 0,
     movement: player.movement || 0,
@@ -113,7 +147,7 @@ export const calcPlayerOvr = player => {
   }
 
   let overall = 0
-  
+
   for (const statName in stats) {
     overall += stats[statName] * roleWeights[statName]
   }
