@@ -30,9 +30,5 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": [
-    "dist",
-    "assets"
-  ],
   "packageManager": "pnpm@10.28.0"
 }
