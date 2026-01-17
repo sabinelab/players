@@ -30,8 +30,6 @@ export const getPlayers = () => {
     .map(h => h.trim())
   const data: Player[] = []
 
-  console.log(lines)
-
   if (!headers) return []
 
   for (let i = 0; i < lines.length; i++) {
